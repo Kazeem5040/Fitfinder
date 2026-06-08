@@ -1,0 +1,111 @@
+.btn-primary{
+    background: red; border-color: red;
+}
+
+body{
+
+background:#f8f9fa;
+
+}
+
+h1{
+
+font-weight:700;
+
+}
+
+.btn-primary{
+
+background:red;
+
+border-color:red;
+
+}
+.hero-image{width:100%; max-width:500px; height: auto; border-radius: 20px;}
+.hero{display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: 60px;}
+.auth-wrapper {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.auth-wrapper{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f4f4f4;
+    padding:40px;
+}
+
+.auth-card{
+    width:100%;
+    max-width:500px;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+.auth-wrapper{min-height: 100vh; 
+    display:flex; 
+    justify-content: center; 
+    align-items: center; }
+
+
+.workout-content h1 {
+    color: #212529;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.workout-content h2 {
+    color: #212529;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.workout-content h3 {
+    color: #495057;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.workout-content p {
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.workout-content ul {
+    margin-left: 20px;
+}
+
+.workout-content li {
+    margin-bottom: 8px;
+}
+
+.workout-content {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.hero-image{
+    max-height:500px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+body{
+    background-color:#f8f9fa;
+}

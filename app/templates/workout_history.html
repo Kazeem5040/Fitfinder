@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <h2>🏋️ Workout History</h2>
+
+    {% if workouts %}
+
+        {% for workout in workouts %}
+
+            <div class="card mt-3 shadow-sm">
+
+                <div class="card-body">
+
+                    <h5>{{ workout.body_part }}</h5>
+
+                    <p>
+                        Energy Level:
+                        {{ workout.energy_level }}
+                    </p>
+
+                    <p>
+                        Created:
+                        {{ workout.created_at.strftime('%B %d, %Y') }}
+                    </p>
+
+                    <a href="{{ url_for('workout.view_workout', workout_id=workout.id) }}"
+                       class="btn btn-primary">
+                        View Workout
+                    </a>
+
+                    <a href="{{ url_for('workout.delete_workout', workout_id=workout.id) }}"
+                       class="btn btn-danger">
+                        Delete
+                    </a>
+
+                </div>
+
+            </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="card mt-4 shadow-sm">
+
+            <div class="card-body text-center">
+
+                <h4>No workout history yet</h4>
+
+                <p class="text-muted">
+                    Generate your first AI workout and it will appear here.
+                </p>
+
+                <a href="{{ url_for('workout.generate_workout') }}"
+                   class="btn btn-success">
+                    Generate Workout
+                </a>
+
+            </div>
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

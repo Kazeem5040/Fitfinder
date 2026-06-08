@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <h1>🏋️ Generate Workout</h1>
+
+    <form method="POST">
+
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+            {{ form.weight.label }}
+            {{ form.weight(class="form-control", placeholder="Enter your weight in lbs") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.fitness_level.label }}
+            {{ form.fitness_level(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.gym_experience.label }}
+            {{ form.gym_experience(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.height.label }}
+            {{ form.height(class="form-control", placeholder="Enter your height in ft") }}
+        </div>
+
+
+        <div class="mb-3">
+            {{ form.energy_level.label }}
+            {{ form.energy_level(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.body_part.label }}
+            {{ form.body_part(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.goal.label }}
+            {{ form.goal(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.workout_time.label }}
+            {{ form.workout_time(class="form-control") }}
+        </div>
+
+        {{ form.submit(class="btn btn-success") }}
+
+    </form>
+
+    {% if workout %}
+
+        <div class="card mt-4 shadow-sm">
+
+            <div class="card-body">
+
+                <h3>Your Workout for today is: </h3>
+
+<div class="workout-content">
+    {{ workout_html|safe }}
+</div>
+            </div>
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

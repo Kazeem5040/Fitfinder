@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <h1>❤️ My Saved Gyms</h1>
+
+    {% if gyms %}
+
+        {% for gym in gyms %}
+
+            <div class="card mt-3">
+
+                <div class="card-body">
+
+                    <h4>
+
+                        {{ gym.gym_name }}
+
+                    </h4>
+
+                    <p>
+
+                        ⭐ Rating:
+                        {{ gym.gym_rating }}
+
+                    </p>
+
+                    <p>
+
+                        📍 Address:
+                        {{ gym.gym_address }}
+
+                    </p>
+
+                    <p>
+
+                        🚶 Distance:
+                        {{ gym.gym_distance }}
+                        miles
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="alert alert-info mt-3">
+
+            No gyms saved yet.
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

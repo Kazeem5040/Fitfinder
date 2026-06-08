@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="mb-5">
+        <h1>Welcome Back, {{ current_user.username }} 👋</h1>
+        <p class="text-muted">
+            Ready to train today?
+        </p>
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h4>🔍 Find Nearby Gyms</h4>
+                    <p>Search gyms by price and distance.</p>
+
+                    <a href="{{ url_for('gym.search') }}"
+                       class="btn btn-primary">
+                       Search Gyms
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h4>🏋️ Generate Workout</h4>
+                    <p>Create a workout based on energy level.</p>
+
+                    <a href="{{ url_for('workout.generate_workout') }}"
+                       class="btn btn-success">
+                       Generate Workout
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<div class="row g-4 mt-2">
+
+    <div class="col-md-6">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+
+                <h4>📈 Workout History</h4>
+
+                <p>
+                    View previous workouts.
+                </p>
+
+                <a href="{{ url_for('workout.workout_history') }}"
+                   class="btn btn-secondary">
+                    View History
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card shadow-sm h-100">
+
+            <div class="card-body">
+
+                <h4>❤️ Saved Gyms</h4>
+
+                <p>
+                    View your favorite gyms.
+                </p>
+
+                <a href="{{ url_for('gym.saved_gyms') }}"
+                   class="btn btn-danger">
+                    View Saved Gyms
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
